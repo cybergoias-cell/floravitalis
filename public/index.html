@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Automação de Entrega - API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f0fff4;
+            border: 2px solid #68d391;
+            border-radius: 10px;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #48bb78;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .endpoints {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .endpoint {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        
+        .endpoint:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .endpoint h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .get { background: #bee3f8; color: #2b6cb0; }
+        .post { background: #c6f6d5; color: #2f855a; }
+        
+        .endpoint p {
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .endpoint code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+        }
+        
+        .admin-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        
+        .admin-link:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Sistema de Automação de Entrega</h1>
+            <p>API Backend para Distribuidora de Suplementos</p>
+        </div>
+        
+        <div class="status">
+            <div class="status-dot"></div>
+            <span><strong>Status:</strong> API Online e Funcionando</span>
+        </div>
+        
+        <div class="endpoints">
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> Health Check</h3>
+                <p>Verifica se a API está funcionando</p>
+                <code>/health</code>
+            </div>
+            
+            <div class="endpoint">
+                <h3><span class="method post">POST</span> Webhook PagSeguro</h3>
+                <p>Recebe confirmações de pagamento</p>
+                <code>/webhook/pagseguro</code>
+            </div>
+            
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> Listar Pedidos</h3>
+                <p>Retorna todos os pedidos processados</p>
+                <code>/pedidos</code>
+            </div>
+            
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> Detalhes do Pedido</h3>
+                <p>Informações completas de um pedido</p>
+                <code>/pedidos/:id</code>
+            </div>
+            
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> Estoque</h3>
+                <p>Lista produtos e quantidades</p>
+                <code>/estoque</code>
+            </div>
+            
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> Alertas</h3>
+                <p>Alertas de estoque baixo</p>
+                <code>/alertas</code>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Desenvolvido para automação completa de entregas</p>
+            <a href="http://localhost:5173" class="admin-link">
+                🎛️ Acessar Painel Administrativo
+            </a>
+        </div>
+    </div>
+</body>
+</html>
