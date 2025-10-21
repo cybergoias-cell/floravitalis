@@ -1,0 +1,44 @@
+{
+  "categorias": [
+    {
+      "id": "proteinas",
+      "nome": "Proteínas",
+      "descricao": "Suplementos de proteína para ganho de massa muscular",
+      "icone": "💪",
+      "ativa": true,
+      "ordem": 1
+    },
+    {
+      "id": "creatina",
+      "nome": "Creatina",
+      "descricao": "Creatina monohidratada e derivados para força e resistência",
+      "icone": "⚡",
+      "ativa": true,
+      "ordem": 2
+    },
+    {
+      "id": "aminoacidos",
+      "nome": "Aminoácidos",
+      "descricao": "BCAA, EAA e outros aminoácidos essenciais",
+      "icone": "🧬",
+      "ativa": true,
+      "ordem": 3
+    },
+    {
+      "id": "vitaminas",
+      "nome": "Vitaminas",
+      "descricao": "Vitaminas e minerais para saúde geral",
+      "icone": "🥗",
+      "ativa": true,
+      "ordem": 4
+    },
+    {
+      "id": "queimadores",
+      "nome": "Queimadores",
+      "descricao": "Termogênicos e queimadores de gordura",
+      "icone": "🔥",
+      "ativa": true,
+      "ordem": 5
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "logo": {
+    "url": "/api/placeholder/200/80?text=SuplementsStore",
+    "alt": "SuplementsStore",
+    "width": 200,
+    "height": 80
+  },
+  "banners": {
+    "enabled": true,
+    "autoplay": true,
+    "interval": 5000,
+    "items": [
+      {
+        "id": "banner1",
+        "url": "/api/placeholder/1200/400?text=Banner+1",
+        "alt": "Banner promocional 1",
+        "title": "Ofertas Especiais",
+        "subtitle": "Até 50% de desconto em suplementos",
+        "link": "/produtos",
+        "active": true,
+        "order": 1
+      },
+      {
+        "id": "banner2",
+        "url": "/api/placeholder/1200/400?text=Banner+2",
+        "alt": "Banner promocional 2",
+        "title": "Novos Produtos",
+        "subtitle": "Confira os lançamentos da semana",
+        "link": "/produtos",
+        "active": true,
+        "order": 2
+      }
+    ]
+  }
+}

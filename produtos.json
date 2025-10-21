@@ -1,0 +1,17 @@
+{
+  "WHEY001": {
+    "nome": "Whey Protein Concentrado 1kg",
+    "peso": 1.2,
+    "estoque": 13
+  },
+  "CREAT002": {
+    "nome": "Creatina Monohidratada 300g",
+    "peso": 0.4,
+    "estoque": 6
+  },
+  "BCAA003": {
+    "nome": "BCAA 2:1:1 120 cápsulas",
+    "peso": 0.3,
+    "estoque": 5
+  }
+}

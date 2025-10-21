@@ -1,0 +1,53 @@
+{
+  "admins": [
+    {
+      "id": "admin001",
+      "username": "admin",
+      "email": "admin@suplementsstore.com",
+      "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "role": "admin",
+      "name": "Administrador",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "last_login": "2025-10-11T16:33:31.206Z",
+      "active": true
+    }
+  ],
+  "clientes": [
+    {
+      "id": "cliente001",
+      "email": "joao@email.com",
+      "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "name": "João da Silva",
+      "cpf": "123.456.789-00",
+      "phone": "11999887766",
+      "birth_date": "1990-05-15",
+      "address": {
+        "street": "Rua das Flores",
+        "number": "123",
+        "complement": "Apto 101",
+        "neighborhood": "Centro",
+        "city": "São Paulo",
+        "state": "SP",
+        "zipcode": "01234-567"
+      },
+      "created_at": "2024-01-15T10:30:00.000Z",
+      "last_login": null,
+      "active": true,
+      "newsletter": true
+    },
+    {
+      "id": "cliente1760200419342",
+      "email": "joao@teste.com",
+      "password": "$2b$10$OM.BXJb3C4pbIYn9imHGdOlD.MKRg97.udG/YseB1YlMtqZeMv5w.",
+      "name": "João Silva",
+      "cpf": "",
+      "phone": "",
+      "birth_date": "",
+      "address": {},
+      "created_at": "2025-10-11T16:33:39.342Z",
+      "last_login": null,
+      "active": true,
+      "newsletter": false
+    }
+  ]
+}
